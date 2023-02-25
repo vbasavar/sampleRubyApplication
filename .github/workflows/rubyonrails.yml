@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  lint:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,11 +21,18 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-      - name: Install rubocop
-        run: gem install rubocop
-      # Add or replace any other lints here
-      #- name: Lint Ruby files
-      #  run: /opt/hostedtoolcache/Ruby/3.0.5/x64/bin/rubocop --parallel
+      #- name: Install rubocop
+      #  run: gem install rubocop
+  Test:
+    runs-on: ubuntu-latest
+    needs: Build
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: '3.0'
       - run: bundle install
+      - name: Rubocop
+        run: rubocop
       - name: Run tests
         run: bin/rake
