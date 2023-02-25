@@ -25,4 +25,4 @@ jobs:
         run: gem install rubocop
       # Add or replace any other lints here
       - name: Lint Ruby files
-        run: which rubocop
+        run: /opt/hostedtoolcache/Ruby/3.0.5/x64/bin/rubocop --parallel
