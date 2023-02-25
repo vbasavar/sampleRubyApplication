@@ -21,6 +21,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
+      - name: Install rubocop
+        run: gem install rubocop
       # Add or replace any other lints here
       - name: Lint Ruby files
         run: ls -ltr bin/rubocop
