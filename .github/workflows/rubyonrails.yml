@@ -23,9 +23,7 @@ jobs:
     needs: Build
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          bundler-cache: true
+      #- uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
       - name: Run tests
         run: bin/rake
       - name: Rubocop
