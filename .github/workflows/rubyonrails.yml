@@ -32,6 +32,6 @@ jobs:
       - run: gem install bundler
       - run: bundle install
       - name: Rubocop
-        run: rubocop -a
+        run: rubocop -A
       - name: Run tests
         run: bin/rake
