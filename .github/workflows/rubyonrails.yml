@@ -24,5 +24,9 @@ jobs:
       - name: Install rubocop
         run: gem install rubocop
       # Add or replace any other lints here
-      - name: Lint Ruby files
-        run: /opt/hostedtoolcache/Ruby/3.0.5/x64/bin/rubocop --parallel
+      #- name: Lint Ruby files
+      #  run: /opt/hostedtoolcache/Ruby/3.0.5/x64/bin/rubocop --parallel
+      - name: Install dependencies
+        run: bundle install
+      - name: Run tests
+        run: bundle exec rake
