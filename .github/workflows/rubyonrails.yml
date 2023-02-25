@@ -16,12 +16,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          ruby-version: 3.x
+
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
       # Add or replace any other lints here
       - name: Lint Ruby files
-        run: ls -ltr bin/rubocop
+        run: ls -ltr
