@@ -25,7 +25,8 @@ jobs:
       - run: gem install bundler
       - run: bundle install
       - name: Rubocop
-        run: which rubocop
+        run: rb=`which rubocop`
+      - run: rb
       - run: ls -ltr
       - name: Run tests
         run: bin/rake
