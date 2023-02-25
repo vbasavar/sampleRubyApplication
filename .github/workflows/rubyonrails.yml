@@ -19,9 +19,9 @@ jobs:
         with:
           ruby-version: 3.x
       - name: Install Ruby and gems
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '3.0'
       # Add or replace any other lints here
       - name: Security audit dependencies
         run: bin/bundler-audit --update
