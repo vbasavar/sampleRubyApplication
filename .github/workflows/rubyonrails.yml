@@ -19,7 +19,9 @@ jobs:
       - name: Perform the ruby setup
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
       
-      -  run: gem install bundler
+      - name: Install the bundler
+        run: gem install bundler
+        
       - run: bundle install
       
       - name: Perform the rubocop
