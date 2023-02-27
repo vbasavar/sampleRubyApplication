@@ -14,6 +14,8 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - name: Login to docker
+        run: docker login  -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -37,7 +39,9 @@ jobs:
       - name: Run tests
         run: bin/rake
       - run: ls -ltr
-      - name: Push the image to docker hub
+      - name: Build the docker image
         run: docker build -t vinayakb807/samplerubyapp:p2 .
+     
       - name: Push image
         run: docker push vinayakb807/samplerubyapp:p2
+
