@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this repository i have covered the below things.
 
-Things you may want to cover:
+* Checkout the code base
 
-* Ruby version
+* Install the ruby and its dependencies
 
-* System dependencies
+* Configured the redis usage under
+    configs/environments/development.rb where in i have set the 
 
-* Configuration
+* Perform the Rubocop checks
 
-* Database creation
+* Run the test cases. Please note that i have add the github ci action to perform the test case execution though i have not written any test cases.
 
-* Database initialization
+* Once successfull build the docker image
 
-* How to run the test suite
+* Login to Docker.io to push the image built
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Push the docker image to docker hub
