@@ -36,3 +36,5 @@ jobs:
       #- run: rubocop -A
       - name: Run tests
         run: bin/rake
+      - name: Push the image to docker hub
+        run: docker build -t vinayakb807/samplerubyapp:p2 .
