@@ -18,3 +18,5 @@ In this repository i have covered the below things.
 * Login to Docker.io to push the image built
 
 * Push the docker image to docker hub
+
+* I have shared the .yml files in the email to deploy this application to kubernetes cluster.
