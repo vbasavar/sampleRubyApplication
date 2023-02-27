@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           
       - name: Build the docker image
-        run: docker build -t vinayakb807/samplerubyapp:p2 .
+        run: docker build -t vinayakb807/samplerubyapp:1.0 .
      
       - name: Push the docker image
-        run: docker push vinayakb807/samplerubyapp:p2
+        run: docker push vinayakb807/samplerubyapp:1.0
