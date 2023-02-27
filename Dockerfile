@@ -1,4 +1,4 @@
-FROM ruby:alpine
+FROM ruby:3
 
 ADD . /Rails-Docker
 WORKDIR /Rails-Docker
